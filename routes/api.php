@@ -20,7 +20,7 @@ use MongoDB\Client;
 
 Route::prefix(('v1'))->middleware(['api','jwt.verify'])->group(function(){
     Route::prefix(('products'))->group(function(){
-        Route::post('/',[ProductController::class,'store']);
+        Route::post('/store',[ProductController::class,'store']);
         Route::get('/',[ProductController::class,'index']);
         Route::get('/low',[ProductController::class,'low']);
         Route::get('/{id}',[ProductController::class,'show']);
