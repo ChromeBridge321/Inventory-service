@@ -29,9 +29,4 @@ Route::prefix(('v1'))->middleware(['api','jwt.verify'])->group(function(){
         Route::get('/search/searchByName',[ProductController::class,'searchByName']);
     });   
 });
-Route::prefix(('v1'))->middleware(['api'])->group(function(){
-    Route::prefix(('products'))->group(function(){
-        Route::get('/return',[ProductController::class,'return']);
-    });   
-});
 
