@@ -185,8 +185,4 @@ public function low()
     }
 }
 
-
-public function return(){
-    return Response::HTTP_OK;
-}
 }
