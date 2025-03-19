@@ -184,5 +184,7 @@ public function low()
         );
     }
 }
-
+public function purgar(){
+    return response()->json(['Purgado' => 'Ordenes'], Response::HTTP_OK);;
+}
 }
